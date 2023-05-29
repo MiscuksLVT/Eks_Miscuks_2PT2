@@ -6,60 +6,110 @@ using UnityEngine.UI;
 public class Jaut : MonoBehaviour {
     public GameObject Nakamais;
     public GameObject paraditAtbPoga;
-    public GameObject[] Jautajumi = new GameObject[9];//9
-    int a = 0;
-    public GameObject[]  toggle;//= new GameObject[7];//7 potomu 4to 4 toogle potom na 40 nado 
-    int[] papa ={ 0, 0, 0, 0, 0, 0,0 };
+    public GameObject[] Jautajumi = new GameObject[3];//9
+    private int a = 0;
+    public Toggle[]  toggle;//= new GameObject[7];//7 potomu 4to 4 toogle potom na 40 nado 
+    int[] kluda = { 0,0,0,0,0,0,0,0,0 };
+    public GameObject Teksts;
 	
 	  public void ParbJautA()
         {
         
         
-        if (toggle[0])
+        if (toggle[0].isOn)
         {
-            papa[0] = 1;
+            kluda[0] = 1;
         }
-        else
+        
+        if (!toggle[1].isOn)
         {
-            papa[0] = 0;
+              kluda[0] = 1;
         }
-      //      if (toggle[1]  )
-    // {
-       //    papa[0] = 1;
-      // }
-     //   if (toggle[2] ==false)
-    //    {
-     //       papa[0] = 1;
-   //     }
-   //     if (toggle[3] ==false)
-  //      {
-   //         papa[0] = 1;
-  //      }
-        Debug.Log("odin" + papa[0]);
+
+        if (toggle[2].isOn)
+        {
+              kluda[0] = 1;
+        }
+      
+        if (!toggle[3].isOn)
+        {
+               kluda[0] = 1;
+        }
+      
+       
+
+        Debug.Log("odin" + kluda[0]);
     }
 
     public void ParbJautB()
     {
-        if (toggle[4] != true)
+        if (!toggle[4].isOn)
         {
-            papa[1] = 1;
+            kluda[1] = 1;
         }
-        if (toggle[5] != false)
+        if (!toggle[5].isOn)
         {
-            papa[1] = 1;
+            kluda[1] = 1;
         }
-        if (toggle[6] != true)
+        if (!toggle[6].isOn)
         {
-            papa[1] = 1;
+            kluda[1] = 1;
         }
-        if (toggle[7] != false)
+        if (toggle[7].isOn)
         {
-            papa[1] = 1;
+            kluda[1] = 1;
         }
-        Debug.Log("dva"  + papa[1]);
+        Debug.Log("dva"  + kluda[1]);
 
     }
-   public void Paradit()
+
+  public void ParbJautC()
+    {
+        if (!toggle[8].isOn)
+        {
+            kluda[2] = 1;
+        }
+        if (!toggle[9].isOn)
+        {
+            kluda[2] = 1;
+        }
+        if (toggle[10].isOn)
+        {
+            kluda[2] = 1;
+        }
+        if (toggle[11].isOn)
+        {
+            kluda[2] = 1;
+        }
+        Debug.Log("tri" + kluda[2]);
+    }
+
+    public void ParbJautD()
+    {
+        if (!toggle[12].isOn)
+        {
+            kluda[3] = 1;
+        }
+        if (toggle[13].isOn)
+        {
+            kluda[3] = 1;
+        }
+        if (toggle[14].isOn)
+        {
+            kluda[3] = 1;
+        }
+        if (!toggle[15].isOn)
+        {
+            kluda[3] = 1;
+        }
+        Debug.Log("four" + kluda[3]);
+    }
+
+
+
+
+
+    public void Paradit()
     {
         if (a == 0)
         {
@@ -68,7 +118,13 @@ public class Jaut : MonoBehaviour {
 
         {
             ParbJautB();
-      // }
+      }else if(a==3)
+        {
+            ParbJautC();
+        } else if (a == 4)
+        {
+            ParbJautD();
+        }
 
 
 
@@ -76,9 +132,9 @@ public class Jaut : MonoBehaviour {
       
         a++;
         
-        if (a >= 2)//a>=9
+        if (a == 4)//a>=10
         {
-            a = 2;//a=9
+            a = 4;//a=9
             Nakamais.SetActive(false);
             paraditAtbPoga.SetActive(true);
         }
@@ -94,6 +150,56 @@ public class Jaut : MonoBehaviour {
         Jautajumi[0].SetActive(true);
    }
 
+
+
+    public void ParadaitPareizus()
+    {
+        int pareizas = 0;
+       
+      for (int da = 0; da == 4; da++)
+        {
+            Debug.Log("Kludas " + kluda[da]);
+            if (kluda[da] ==0)
+            {
+                Debug.Log("Pareizzi1 " + pareizas);
+                pareizas++;
+              
+            }
+            else
+            {
+
+            }
+
+        }
+        Debug.Log("Pareizzi2 " + pareizas);
+        Teksts.GetComponent<Text>().text = pareizas + "/10";
+            Teksts.SetActive(true);
+            paraditAtbPoga.SetActive(false);
+        
+    }
+
+    public void ParaditKludas()
+    {
+
+        if (kluda[0] == 0)
+        {
+
+        }
+        else if (kluda[1] == 0)
+        {
+
+        }
+        else if (kluda[3] == 0)
+        {
+
+        }
+        else if (kluda[4] == 0)
+        {
+        
+        }
+
+
+        }
    
 
 }
