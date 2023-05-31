@@ -9,10 +9,10 @@ public class Jaut : MonoBehaviour {
     public GameObject[] Jautajumi = new GameObject[3];//9
     private int a = 0;
     public Toggle[]  toggle;//= new GameObject[7];//7 potomu 4to 4 toogle potom na 40 nado 
-    int[] kluda = { 0,0,0,0,0,0,0,0,0 };
+    int[] kluda = { 0,0,0,0 };
     public GameObject Teksts;
-	
-	  public void ParbJautA()
+   private float pareizas = 0;
+    public void ParbJautA()
         {
         
         
@@ -150,31 +150,42 @@ public class Jaut : MonoBehaviour {
         Jautajumi[0].SetActive(true);
    }
 
-
+    public void papa()
+    {
+  
+    }
 
     public void ParadaitPareizus()
     {
-        int pareizas = 0;
-       
-      for (int da = 0; da == 4; da++)
+        int num = 0;
+        bool ir = false;
+
+        for (int j = 0; j <kluda.Length; j++)
         {
-            Debug.Log("Kludas " + kluda[da]);
-            if (kluda[da] ==0)
+
+            if (kluda[j] == 1)
             {
-                Debug.Log("Pareizzi1 " + pareizas);
-                pareizas++;
-              
+               
             }
             else
             {
+                ir = true;
+            }
+            
+            if (ir)
+            {
 
+              
+                
+                pareizas++;
+                papa();
             }
 
-        }
-        Debug.Log("Pareizzi2 " + pareizas);
-        Teksts.GetComponent<Text>().text = pareizas + "/10";
-            Teksts.SetActive(true);
-            paraditAtbPoga.SetActive(false);
+      }
+        //Debug.Log("Pareizzi2 " + pareizas);
+        Teksts.GetComponent<Text>().text = pareizas + "/10"  ;
+        Teksts.SetActive(true);
+          paraditAtbPoga.SetActive(false);
         
     }
 
