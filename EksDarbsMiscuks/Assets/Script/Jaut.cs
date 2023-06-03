@@ -118,10 +118,10 @@ public class Jaut : MonoBehaviour {
 
         {
             ParbJautB();
-      }else if(a==3)
+      }else if(a==2)
         {
             ParbJautC();
-        } else if (a == 4)
+        } else if (a == 3)
         {
             ParbJautD();
         }
