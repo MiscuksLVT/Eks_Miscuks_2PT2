@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Jaut : MonoBehaviour {
     public GameObject Nakamais;
     public GameObject paraditAtbPoga;
     public GameObject[] Jautajumi = new GameObject[9];//9
-    private int a = 0, b=0;
+    private int jautajums = 0;
     public Toggle[]  toggle;//= new GameObject[7];//7 potomu 4to 4 toogle potom na 40 nado 
     int[] kluda = { 0,0,0,0,0,0,0,0,0,0 };
     public GameObject Teksts;
@@ -17,6 +18,7 @@ public class Jaut : MonoBehaviour {
     public GameObject[] toogleTexts;
     public GameObject paraditNepareizasPoga;
     public GameObject Tekstspoga;
+
 
 
     //1
@@ -234,38 +236,38 @@ public class Jaut : MonoBehaviour {
     }
     public void Paradit()
     {
-        if (a == 0)
+        if (jautajums == 0)
         {
             ParbJautA();
-        } else if (a == 1)
+        } else if (jautajums == 1)
 
         {
             ParbJautB();
-        } else if (a == 2)
+        } else if (jautajums == 2)
         {
             ParbJautC();
-        } else if (a == 3)
+        } else if (jautajums == 3)
         {
             ParbJautD();
-        } else if (a == 4)
+        } else if (jautajums == 4)
         {
             ParbJautE();
-        } else if (a == 5)
+        } else if (jautajums == 5)
         {
             ParbJautF();
-        } else if (a == 6) {
+        } else if (jautajums == 6) {
 
             ParbJautG();
         }
-        else if (a == 7)
+        else if (jautajums == 7)
         {
             ParbJautH();
         }
-        else if (a == 8)
+        else if (jautajums == 8)
         {
             ParbJautI();
         }
-        else if (a == 9)
+        else if (jautajums == 9)
         {
             ParbJautJ();
         }
@@ -273,21 +275,26 @@ public class Jaut : MonoBehaviour {
 
 
 
-            Jautajumi[a].SetActive(false);
-      
-        a++;
+            Jautajumi[jautajums].SetActive(false);
+
+        jautajums++;
         
-        if (a == 10)
+        if (jautajums == 10)
         {
-            a =10;
+            jautajums = 10;
             Nakamais.SetActive(false);
             paraditAtbPoga.SetActive(true);
         }
         else
         {
          
-            Jautajumi[a].SetActive(true);
+            Jautajumi[jautajums].SetActive(true);
         }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     public void ParaditNepareizus()
@@ -373,8 +380,7 @@ public class Jaut : MonoBehaviour {
 
         }
 
-
-    }
+         }
 
 
         void Start()
@@ -412,8 +418,8 @@ public class Jaut : MonoBehaviour {
         {
             paraditNepareizasPoga.SetActive(true);
         }
-        
 
+        
     }
 
   
