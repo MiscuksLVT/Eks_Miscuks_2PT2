@@ -20,4 +20,4 @@ Unity projekts, kas sastāv no 10 jautājumiem. Lietotājam jāatbild uz 10 jaut
  - [x] Izdariut Class diagrammu
  - [x] Izarit precentaciju ar macibu materialu
  
-![Presentation](https://docs.google.com/presentation/d/e/2PACX-1vQj0FxcqT6A-O7FZnz0Yu5F5ZAOyuFSxvvxDFGIooFJGBqu3yOpsL3P0hK9EctH-oS4a1nSgKPORGTb/pub?start=false&loop=false&delayms=3000)
+[Presentation](https://docs.google.com/presentation/d/e/2PACX-1vQj0FxcqT6A-O7FZnz0Yu5F5ZAOyuFSxvvxDFGIooFJGBqu3yOpsL3P0hK9EctH-oS4a1nSgKPORGTb/pub?start=false&loop=false&delayms=3000)
