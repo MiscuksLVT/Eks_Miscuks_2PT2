@@ -19,4 +19,4 @@ Unity projekts, kas sastāv no 10 jautājumiem. Lietotājam jāatbild uz 10 jaut
  - [x] Izdarit Use case diagrammu
  - [x] Izdariut Class diagrammu
  - [x] Izarit precentaciju ar macibu materialu
- - [x] Eksāmenā saņemе 10 😸
+
